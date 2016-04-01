@@ -14,6 +14,7 @@ var ABCheck = function(str){
   return false;
 }
 
+
 var ABCheck = function(str){
   return str.match(/a...b/g) !== null;
 }
