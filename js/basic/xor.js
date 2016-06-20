@@ -3,6 +3,5 @@
 // xor(true, false)  // => true
 
 function xor(x, y){
-  return(!x != !y)
+    return(!x != !y);
 }
-

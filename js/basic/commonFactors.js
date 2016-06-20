@@ -7,18 +7,17 @@
 // another example: console.log(commonFactors(20, 25)) // => [5, 1]
 
 function commonFactors(num1, num2){
-  var factors = []
+    var factors = []
     , max
-  if (num1 > num2) {
-    max = num1
-  } else {
-    max = num2
-  }
-  for (var i = max; i >= 1; i--) {
-    if ((num1 % i) === (num2 % i)) {
-      factors.push(i)
+    if (num1 > num2) {
+        max = num1;
+    } else {
+        max = num2;
     }
-  }
-  return factors
+    for (var i = max; i >= 1; i--) {
+        if ((num1 % i) === (num2 % i)) {
+            factors.push(i);
+        }
+    }
+    return factors;
 }
-

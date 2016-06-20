@@ -4,6 +4,5 @@
 // countWords('Built in methods are your friend!') // => 6
 
 function countWords(str){
-  return str.split(' ').length
+    return str.split(' ').length;
 }
-
