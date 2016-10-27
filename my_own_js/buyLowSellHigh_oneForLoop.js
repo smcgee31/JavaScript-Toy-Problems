@@ -7,17 +7,17 @@
 var prices = [ 5.50, 5.35, 5.75, 5.15, 5.75, 3.15, 4.85 ];
 
 var getProfit = function( prices ) {
-	var finalBuy = prices[0]   // 5.25
-    , finalBuyIndex = 0      //  0
-    , finalSell = prices[0]  // 5.25
-    , finalSellIndex = 0     //  0
-    , currBuy = prices[0]    // 5.25
-    , currBuyIndex = 0       //  0
-    , currSell = prices[0]   // 5.35
-    , currSellIndex = 0      //  1
-    , finalDiff = 0					 //  0
-    , currDiff = 0					 // 5.25
-  ;
+	var   finalBuy       = prices[0]    // 5.25
+    	, finalBuyIndex  = 0            //  0
+    	, finalSell      = prices[0]    // 5.25
+    	, finalSellIndex = 0            //  0
+    	, currBuy        = prices[0]    // 5.25
+    	, currBuyIndex   = 0            //  0
+    	, currSell       = prices[0]    // 5.35
+    	, currSellIndex  = 0            //  1
+    	, finalDiff      = 0			//  0
+    	, currDiff       = 0			// 5.25
+  	;
 
 	// We have to compare the difference between a specified low and a newfound high
 	for ( var i = 1; i < prices.length; i++ ) {

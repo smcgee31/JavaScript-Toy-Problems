@@ -7,22 +7,22 @@
 var prices = [ 5.50, 5.35, 5.75, 5.15, 5.75, 3.15, 4.85 ];
 
 var getProfit = function( prices ) {
-	var currBuy       = 0
-    , currBuyIndex  = 0
-    , currSell      = 0
-    , currSellIndex = 0
-    , currDiff      = 0
+	var   currBuy       = 0
+    	, currBuyIndex  = 0
+    	, currSell      = 0
+    	, currSellIndex = 0
+    	, currDiff      = 0
     ;
 
 	// We have to compare the difference between a specified low and a newfound high
 	for ( var i = 0; i < prices.length; i++ ) {
 		for (var j = i + 1; j < prices.length; j++) {
 			if (prices[i] < prices[j] && prices[j] - prices[i] > currDiff) {
-				currBuy = prices[i];
-				currBuyIndex = i;
-				currSell = prices[j];
+				currBuy       = prices[i];
+				currBuyIndex  = i;
+				currSell      = prices[j];
 				currSellIndex = j;
-				currDiff = prices[j] - prices[i];
+				currDiff      = prices[j] - prices[i];
 			}
 		}
 	}
@@ -32,11 +32,11 @@ var getProfit = function( prices ) {
     return currency + '' + n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
 	};
 
-	var finalBuy = formater(currBuy, '$')
-		,	finalBuyIndex = currBuyIndex
-		,	finalSell = formater(currSell, '$')
-		,	finalSellIndex = currSellIndex
-		,	finalDiff = formater(currDiff, '$')
+	var   finalBuy       = formater(currBuy, '$')
+		, finalBuyIndex  = currBuyIndex
+		, finalSell      = formater(currSell, '$')
+		, finalSellIndex = currSellIndex
+		, finalDiff      = formater(currDiff, '$')
 	;
 
   console.log(`the best buy price is ${finalBuy}`);
