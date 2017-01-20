@@ -22,16 +22,18 @@
 // The index N such as the side to the left of N is equal to the side to the right of N. If you do not
 // find an index that fits these rules, then you will return -1.
 
-function findEvenIndex(arr) {
-
-  for (var i = 1; i <= arr.length; i++) {
-    if (arr[i-1] === arr[arr.length-i]) {
-
-    }
-  }
-
-
-
-
-
+Array.prototype.sum = function() {
+  let result = 0;
+  for (var i = 0; i < this.length; i++) result += this[i];
+  return result;
 }
+
+function findEvenIndex(arr) {
+    if (arr.length <= 1) return -1;
+    for (var i = 1; i < arr.length; i++) {
+      if (arr.slice(0,i).sum() === arr.slice(i+1).sum()) return 'the index is ' + i;
+    }
+    return -1
+}
+
+console.log(findEvenIndex([1,100,50,-51,1,1]));
