@@ -1,12 +1,15 @@
-$(document).ready(function () {
-  const div1 = $('#div1')
+$(function () {
+  var div1 = $('#div1')
     , div2 = $('#div2');
 
-  function1 = () => div1.append('function1 executed<br />');
+  // function1 = () => div1.append('function1 executed<br />');
+  function1 = function() {
+    div.append('function1 executed<br />')
+  }
 
-  const function2 = () => div1.append('function2 executed<br />');
+  var function2 = () => div1.append('function2 executed<br />');
 
-  const obj = {
+  var obj = {
     function3: () => div1.append('function3 executed<br />')
   };
 
