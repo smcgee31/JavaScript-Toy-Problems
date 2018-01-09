@@ -14,17 +14,14 @@ whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: 
 
 function whatIsInAName(collection, source) {
   let arr = [];
-  
-  collection.forEach(e => {
-    let collVal = Object.keys(e).sort();
-    let sourceVal = Object.keys(source).sort();
-    if (sourceVal.every((v,i) => v === collVal[i])) {
-      if (ObjsAreEqual(e, source)) {
-        arr.push(e);
-      }
+  collection.forEach(collVal => {
+    let every = Object.keys(source).every(k => {
+      return collVal[k] === source[k];
+    })
+    if (every) {
+      arr.push(collVal);
     }
   });
-
   return arr;
 }
 
