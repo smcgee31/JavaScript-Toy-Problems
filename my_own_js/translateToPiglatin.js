@@ -12,11 +12,12 @@ function translatePigLatin(str) {
     return `${ str }way`;
   }
 
-  
+  let str1 = str.replace(/^[^aeiou]+/, '');
+  let str2 = str.slice(0, (str.length - str1.length));  
 
-  console.log(str);
-  return str;
+  return `${ str1 }${ str2 }ay`;
 }
 
 translatePigLatin("consonant");
 translatePigLatin("algorithm");
+translatePigLatin("schaffer");
